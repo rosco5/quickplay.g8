@@ -19,7 +19,7 @@ object ApplicationBuild extends Build {
     // Good JSON
     //"org.json4s" %% "json4s-jackson" % "3.1.0-SNAPSHOT"
     //comes from http://repo.typesafe.com/typesafe/simple/snapshots/org/json4s/
-    "org.json4s" % "json4s-jackson_2.10.0-RC2" % "3.1.0-SNAPSHOT"
+    "org.json4s" % "json4s-jackson_2.10.0-RC1" % "3.1.0-SNAPSHOT"
     //note, "com.foo" %% "bar" % "1.0" is shorthad for "com.foo" % "bar-2.10.0-RC1" % "1.0"
   )
 
