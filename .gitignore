@@ -2,3 +2,5 @@ project/target
 target
 .lib
 *.swp
+dist
+logs
