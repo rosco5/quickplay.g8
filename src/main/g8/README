@@ -1,0 +1,29 @@
+g8 for jamming together a play20 app
+=====================================
+
+One challenge with scala is the proliferation of dsl's to automagically configure things, and finding the best lib to accomplish a goal (that is compiled for this version of scala, as a release, and available via sbt).
+
+Here is my current best guess at a robust toolchain to quickstart.
+
+This is a g8 template, https://github.com/n8han/giter8, or use the "play new" g8 support.
+
+The default settings for this project are
+- use improved sbt script
+- configure build.sbt to build sbt with 2.10.0-RC1
+- configure build.properties to use sbt 0.12.1
+- setup some standard libs & repositories in Build.scala
+- add some sbt plugins for graphPlugin, sbtPlugin, eclispePlugin
+
+Ways to run the app:
+- via sbt: sbt clean update compile stage dist run 
+-- set offline := true
+- via Play20: play run
+- via Procfile: gem install foreman && foreman start
+- deploy to heroku
+
+Some useful heroku commands:
+heroku config:add JAVA_OPTS='-Xms384m -Xmx384m -Xss1M -XX:MaxPermSize=512M -XX:+UseCompressedOops -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
+heroku config:add SBT_OPTS='-Xms384m -Xmx384m -Xss1M -XX:MaxPermSize=512M -XX:+UseCompressedOops -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
+heroku config:add BUILDPACK_URL=https://github.com/blendlabs/heroku-buildpack-scala
+test buildpack locally: https://github.com/heroku/buildkits && heroku build -b ~/src/heroku-buildpack-scala
+debugging: http://mikeslinn.blogspot.com/2012/09/debugging-jvm-programs-on-heroku.html
