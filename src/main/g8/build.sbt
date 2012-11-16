@@ -5,6 +5,3 @@ scalaBinaryVersion <<= scalaVersion.identity
 
 //visualize the dependency graph
 net.virtualvoid.sbt.graph.Plugin.graphSettings
-
-//g8
-seq(giter8Settings :_*)
