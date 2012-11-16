@@ -20,5 +20,7 @@ Ways to run the app:
 - deploy to heroku
 
 Some useful heroku commands:
-heroku config:add JAVA_OPTS='-Xmx512m -Xss512k -XX:+UseCompressedOops -XX:MaxPermSize=456M -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
-heroku config:add SBT_OPTS='-Xmx512m -Xss512k -XX:+UseCompressedOops -XX:MaxPermSize=456M -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
+heroku config:add JAVA_OPTS='-Xms384m -Xmx384m -Xss1M -XX:MaxPermSize=512M -XX:+UseCompressedOops -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
+heroku config:add SBT_OPTS='-Xms384m -Xmx384m -Xss1M -XX:MaxPermSize=512M -XX:+UseCompressedOops -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
+debugging: http://mikeslinn.blogspot.com/2012/09/debugging-jvm-programs-on-heroku.html
+test buildpack locally: https://github.com/heroku/buildkits
