@@ -20,7 +20,7 @@ Ways to run the app:
 - deploy to heroku
 
 Some useful heroku commands:
-git init . && git add . && git commit -m "init" && heroku create && git push heroku master
+git init . && git add . && git commit -m "init" && heroku create  --buildpack https://github.com/blendlabs/heroku-buildpack-scala && git push heroku master
 heroku config:add JAVA_OPTS='-Xms384m -Xmx384m -Xss1M -XX:MaxPermSize=512M -XX:+UseCompressedOops -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
 heroku config:add SBT_OPTS='-Xms384m -Xmx384m -Xss1M -XX:MaxPermSize=512M -XX:+UseCompressedOops -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
 heroku config:add BUILDPACK_URL=https://github.com/blendlabs/heroku-buildpack-scala
