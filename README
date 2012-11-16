@@ -22,5 +22,6 @@ Ways to run the app:
 Some useful heroku commands:
 heroku config:add JAVA_OPTS='-Xms384m -Xmx384m -Xss1M -XX:MaxPermSize=512M -XX:+UseCompressedOops -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
 heroku config:add SBT_OPTS='-Xms384m -Xmx384m -Xss1M -XX:MaxPermSize=512M -XX:+UseCompressedOops -javaagent:heroku-javaagent-1.2.jar=stdout=true -XX:+PrintGCDetails -XX:+PrintHeapAtGC -XX:+PrintGCDateStamps  -XX:+CMSClassUnloadingEnabled'
+heroku config:add BUILDPACK_URL=https://github.com/blendlabs/heroku-buildpack-scala
+test buildpack locally: https://github.com/heroku/buildkits && heroku build -b ~/src/heroku-buildpack-scala
 debugging: http://mikeslinn.blogspot.com/2012/09/debugging-jvm-programs-on-heroku.html
-test buildpack locally: https://github.com/heroku/buildkits
