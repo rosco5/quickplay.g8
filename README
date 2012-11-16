@@ -14,6 +14,7 @@ The default settings for this project are
 
 Ways to run the app:
 - via sbt: sbt clean update compile stage dist run 
+-- set offline := true
 - via Play20: play run
 - via Procfile: gem install foreman && foreman start
 - deploy to heroku

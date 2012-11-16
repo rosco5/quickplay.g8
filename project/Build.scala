@@ -2,20 +2,24 @@ import sbt._
 import Keys._
 import play.Project._
 
+/*
+ * if you want to cross-build: https://github.com/harrah/xsbt/wiki/Cross-Build
+ * As of now, json4s is missing json4s-ast, so jam that lib in here
+ */
 object ApplicationBuild extends Build {
 
   val appName         = "quickstart-play20"
   val appVersion      = "0.1-SNAPSHOT"
   
-  // if you want to cross-build: https://github.com/harrah/xsbt/wiki/Cross-Build
-
+  // dependencies for project, not for the build
   val appDependencies = Seq(
     // Add your project dependencies here,
     jdbc,
     anorm,
     // Good JSON
     //"org.json4s" %% "json4s-jackson" % "3.1.0-SNAPSHOT"
-    "org.json4s" % "json4s-jackson_2.10.0-RC1" % "3.1.0-SNAPSHOT"
+    //comes from http://repo.typesafe.com/typesafe/simple/snapshots/org/json4s/
+    "org.json4s" % "json4s-jackson_2.10.0-RC2" % "3.1.0-SNAPSHOT"
     //note, "com.foo" %% "bar" % "1.0" is shorthad for "com.foo" % "bar-2.10.0-RC1" % "1.0"
   )
 
