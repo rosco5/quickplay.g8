@@ -5,6 +5,8 @@ One challenge with scala is the proliferation of dsl's to automagically configur
 
 Here is my current best guess at a robust toolchain to quickstart.
 
+This is a g8 template, https://github.com/n8han/giter8, or use the "play new" g8 support.
+
 The default settings for this project are
 - use improved sbt script
 - configure build.sbt to build sbt with 2.10.0-RC1
