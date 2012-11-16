@@ -1,0 +1,32 @@
+g8 for jamming together a play20 app
+=====================================
+
+Here is quickstart a play backend with:
+- configure build.sbt to build sbt with 2.10.0-RC1
+- configure build.properties to use sbt 0.12.1
+- good set of libs dependencies & repositories in Build.scala
+- depends on libs versinos that are compiled for this versio of scala and available via sbt
+- document some of those dsl files
+- include useful sbt plugins for graphPlugin, sbtPlugin, eclispePlugin
+- successfully build & run on heroku 
+
+==========
+HOW TO USE
+==========
+- curl https://raw.github.com/paulp/sbt-extras/master/sbt > sbt && chmod u+x sbt
+- run ./sbt sbt clean update compile stage dist run 
+- or play run
+- or gem instal foreman && foreman start
+
+=============
+HOW TO DEPLOY
+=============
+- run heroku-init.sh
+- test locally: heroku build -b https://github.com/blendlabs/heroku-buildpack-scala
+- git push heroku master
+
+============
+HOW TO DEBUG
+============
+http://mikeslinn.blogspot.com/2012/09/debugging-jvm-programs-on-heroku.html
+heroku run "sh target/bin/foo"
