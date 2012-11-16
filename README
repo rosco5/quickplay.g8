@@ -1,0 +1,11 @@
+g8 for jamming together a play20 app
+=====================================
+
+The default settings for this project are
+
+build.sbt:
+ scalaVersion := "2.10.0-RC1"
+
+
+
+net.virtualvoid.sbt.graph.Plugin.graphSettings
