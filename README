@@ -1,10 +1,15 @@
 g8 for jamming together a play20 app
 =====================================
 
+One challenge with scala is the proliferation of dsl's to automagically configure things, and finding the best lib to accomplish a goal (that is compiled for this version of scala, as a release, and available via sbt).
+
+Here is my current best guess at a robust toolchain to quickstart.
+
 The default settings for this project are
 
-build.sbt:
- scalaVersion := "2.10.0-RC1"
+use improved sbt script
+build.sbt: configure to build sbt with 2.10.0-RC1
+build.properties: use sbt 0.12.1
 
 
 
