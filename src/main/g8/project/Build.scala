@@ -8,8 +8,8 @@ import play.Project._
  */
 object ApplicationBuild extends Build {
 
-  val appName         = "quickstart-play20"
-  val appVersion      = "0.1-SNAPSHOT"
+  val appName         = $application_name$
+  val appVersion      = "0.1"
   
   // dependencies for project, not for the build
   val appDependencies = Seq(

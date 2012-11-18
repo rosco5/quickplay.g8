@@ -22,3 +22,9 @@ addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.7.0")
 
 //elipse
 addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.1.0")
+
+//idea
+//resolvers += "sbt-idea-repo" at "http://mpeltonen.github.com/maven/"
+
+//idea
+//addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.1.0")
