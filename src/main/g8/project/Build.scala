@@ -12,21 +12,21 @@ object ApplicationBuild extends Build {
   val appVersion      = "0.1"
   
   // dependencies for project, not for the build
+  //note, "com.foo" %% "bar" % "1.0" is shorthad for "com.foo" % "bar-2.10.0-RC1" % "1.0"
   val appDependencies = Seq(
     // Add your project dependencies here,
     jdbc,
     anorm,
-    // Good JSON
+    // Good JSON, use RC1 for now coz RC2 has bad pom
     //"org.json4s" %% "json4s-jackson" % "3.1.0-SNAPSHOT"
     //comes from http://repo.typesafe.com/typesafe/simple/snapshots/org/json4s/
     "org.json4s" % "json4s-jackson_2.10.0-RC1" % "3.1.0-SNAPSHOT"
-    //note, "com.foo" %% "bar" % "1.0" is shorthad for "com.foo" % "bar-2.10.0-RC1" % "1.0"
   )
 
   val appResolvers = Seq(
       //Typesafe
       "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/",
-      //"Typesafe Snapshot Repository" at "http://repo.typesafe.com/typesafe/simple/snapshots/",
+      "Typesafe Snapshot Repository" at "http://repo.typesafe.com/typesafe/simple/snapshots/",
       //Maven
       //"Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository",
       //"java-net" at "http://download.java.net/maven/2",
