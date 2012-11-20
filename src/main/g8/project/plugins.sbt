@@ -4,6 +4,9 @@ logLevel := Level.Warn
 // The Typesafe repository 
 resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 
+// The Typesafe Snapshots repository 
+resolvers += "Typesafe Snapshots repository" at "http://repo.typesafe.com/typesafe/snapshots/"
+
 // Blend credz
 credentials += Credentials("Artifactory Realm", "blend.artifactoryonline.com", "deployer", System.getProperty("BLEND_ARTEFACTORY"))
 
@@ -21,7 +24,9 @@ addSbtPlugin("play" % "sbt-plugin" % "2.1-11022012")
 addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.7.0")
 
 //elipse
-addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.1.0")
+// http://repo.typesafe.com/typesafe/simple/ivy-snapshots/com.typesafe.sbteclipse/sbteclipse-plugin/scala_2.9.2/
+// addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.1.0") 
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.1.0-SNAPSHOT") 
 
 //idea
 //resolvers += "sbt-idea-repo" at "http://mpeltonen.github.com/maven/"
